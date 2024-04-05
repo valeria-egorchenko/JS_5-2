@@ -1,0 +1,24 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+ <title>Пример 4 со стрелочными функциями</title> 
+</head> 
+<body> 
+<script type="text/javascript"> 
+// Стрелочная функция, принимающая строку в качестве аргумента 
+const replaceVowels = str => { 
+ // Используем метод replace() и регулярное выражение для замены гласных букв на символ '*' 
+ let replacedStr = str.replace(/[aeiouаеёиоуыэюя]/gi, '*'); 
+ return replacedStr; // Возвращаем новую строку с замененными символами 
+}; 
+
+// Запрос ввода текстовой строки от пользователя
+let inputString = prompt("Введите текстовую строку:");
+
+// Вызов стрелочной функции и вывод результата на экран
+let result = replaceVowels(inputString);
+document.write("Результат: " + result);
+
+</script> 
+</body> 
+</html>

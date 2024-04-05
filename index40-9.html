@@ -1,0 +1,34 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+<title>Пример 9 с рекурсиями </title> 
+</head> 
+<body> 
+<script type="text/javascript"> 
+// Функция для вывода чисел от n до 1 
+function countDown(n) { 
+    // Базовый случай: если n равно 0, завершаем рекурсию 
+    if (n === 0) { 
+        return; 
+    } 
+    
+    // Выводим текущее число и вызываем функцию countDown с аргументом n-1 
+    console.log(n); 
+    countDown(n - 1); 
+}
+
+// Запрашиваем число у пользователя
+var inputNumber = prompt("Введите число:");
+
+// Преобразуем введенную строку в число
+var number = parseInt(inputNumber);
+
+// Проверяем, что введено число, и вызываем функцию countDown
+if (!isNaN(number)) {
+    countDown(number);
+} else {
+    console.log("Ошибка. Введено не число.");
+}
+</script> 
+</body> 
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>Пример 7 с функцией обратного вызова (коллбэком)</title>
+</head>
+<body>
+<script type="text/javascript">
+// Функция для вызова функции обратного вызова n раз
+function callCallbackNTimes(n, callback) {
+  for (let i = 0; i < n; i++) {
+    callback();
+  }
+}
+// Функция обратного вызова, которая выводит сообщение в консоль
+function logMessage() {
+  console.log("Функция обратного вызова была вызвана");
+}
+// Вызываем функцию callCallbackNTimes и передаем количество вызовов и функцию обратного вызова
+callCallbackNTimes(5, logMessage);
+</script>
+</body>
+</html>

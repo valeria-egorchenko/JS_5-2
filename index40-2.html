@@ -1,0 +1,29 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+  <title>Пример 2 с анонимными функциями</title> 
+</head> 
+  <body> 
+    <script type="text/javascript"> 
+    // Анонимное функциональное выражение, принимающее строку в качестве аргумента 
+      const capitalizeWords = function(str){  
+      const words = str.split(' '); // Разбиваем строку на массив слов по разделителю пробела 
+      let result = ''; 
+      // Используем цикл for для перебора слов массива 
+      for (let i = 0; i < words.length; i++){  
+      const capitalizedWord = words[i][0].toUpperCase() + words[i].slice(1); // Преобразуем первую букву слова в заглавную 
+      result += capitalizedWord + ' '; // Добавляем преобразованное слово в новую строку с пробелом 
+      } 
+      return result.trim(); // Удаляем лишние пробелы в начале и конце строки и возвращаем результат 
+      } 
+
+// Запрос ввода текстовой строки от пользователя
+let inputString = prompt("Введите текстовую строку:");
+
+// Вызов анонимной функции и вывод результата на экран
+let result = capitalizeWords(inputString);
+document.write("Результат: " + result);
+
+</script> 
+</body> 
+</html>

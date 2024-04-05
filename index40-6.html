@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>Пример 6 с функцией-конструктором </title>
+</head>
+<body>
+<script type="text/javascript">
+// Функция-конструктор для объекта "Студент"
+function Student(name, age) {
+  this.name = name;
+  this.age = age;
+ // Метод для представления студента
+  this.introduce = function() {
+   console.log("Привет, меня зовут " + this.name + " и мне " + this.age + " лет.");
+   };
+  }
+// Создаем новый объект "Студент" с помощью функции-конструктора
+let student1 = new Student("Валерия", 26);
+// Вызываем метод "introduce" для представления студента
+student1.introduce();
+</script>
+</body>
+</html>

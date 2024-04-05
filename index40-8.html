@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>Пример 8 с замыканиями </title>
+</head>
+<body>
+<script type="text/javascript">
+// Функция для создания объекта мессенджера
+function createMessenger() {
+ let messageCounter = 0;
+ // Методы объекта мессенджера
+ return {
+   incrementCounter: function() {
+     messageCounter++;
+ },
+ getCounter: function() {
+   return messageCounter;
+ },
+ resetCounter: function() {
+   messageCounter = 0;
+ }
+ };
+}
+// Создаем новый объект мессенджера
+let messenger = createMessenger();
+// Увеличиваем счетчик несколько раз
+messenger.incrementCounter();
+messenger.incrementCounter();
+messenger.incrementCounter();
+// Получаем текущее значение счетчика
+console.log(messenger.getCounter()); // Вывод: 3
+// Сбрасываем счетчик
+messenger.resetCounter();
+// Проверяем счетчик после сброса
+console.log(messenger.getCounter()); // Вывод: 0
+</script>
+</body>
+</html>

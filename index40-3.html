@@ -1,0 +1,27 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+  <title>Пример 3 с именованными функциональными выражениями</title> 
+</head> 
+    <body> 
+    <script type="text/javascript"> 
+// Именованная функция reverseString, принимающая строку в качестве аргумента 
+    const reverseString = function(str){  
+    let reversedStr = ''; // Переменная для хранения обратной строки 
+ // Используем цикл for для перебора символов строки в обратном порядке 
+      for (let i = str.length - 1; i >= 0; i--) {  
+      reversedStr += str[i]; // Добавляем текущий символ в переменную с обратной строкой 
+      }
+      return reversedStr; // Возвращаем обратную строку-перевёртыш 
+      }; 
+
+// Запрос ввода текстовой строки от пользователя
+let inputString = prompt("Введите текстовую строку:");
+
+// Вызов именованной функции и вывод результата на экран
+let result = reverseString(inputString);
+document.write("Результат: " + result);
+
+</script> 
+</body> 
+</html>
